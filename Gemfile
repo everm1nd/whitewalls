@@ -20,6 +20,7 @@ gem 'unicorn'
 group :development do
 	gem 'capistrano'
 	gem 'debugger'
+	gem 'rspec-rails', '~> 3.0.0.beta'
 end
 
 # Use debugger
