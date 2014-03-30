@@ -15,6 +15,8 @@ gem 'sass-rails', '~> 4.0.2'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'slim-rails'
 
+gem 'simple_form'
+
 gem 'unicorn'
 
 group :development do
