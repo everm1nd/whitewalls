@@ -227,6 +227,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   debugger
+  kaminari
   mini_magick
   mysql2
   rails (= 4.0.4)
