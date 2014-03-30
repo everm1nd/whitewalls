@@ -20,6 +20,7 @@ gem 'simple_form'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 gem 'carrierwave'
+gem 'mini_magick'
 
 gem 'unicorn'
 
