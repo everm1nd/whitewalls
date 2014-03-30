@@ -6,4 +6,6 @@ class Artwork < ActiveRecord::Base
 	paginates_per 14
 
 	validates_presence_of :title, :description, :year, :price, :artist, :image
+
+	scope :newest, order: 'created_at DESC'
 end

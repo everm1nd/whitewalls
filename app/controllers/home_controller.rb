@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-  	@artworks = Artwork.page params[:page]
+  	@artworks = Artwork.newest.page params[:page]
   end
 end
