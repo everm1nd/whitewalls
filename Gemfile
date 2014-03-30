@@ -17,6 +17,8 @@ gem 'slim-rails'
 
 gem 'simple_form'
 
+gem 'activeadmin', github: 'gregbell/active_admin'
+
 gem 'unicorn'
 
 group :development do
