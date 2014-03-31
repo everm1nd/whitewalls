@@ -1,0 +1,10 @@
+.artwork
+	h1.artist
+		= @artwork.artist.name
+	= render partial: 'artworks/large', locals: { artwork: @artwork }
+	.artist-works
+		h2 Другие принты этого художника
+		= render @artist_works
+	.other-works
+		h2 Принты других художников
+		= render @other_works

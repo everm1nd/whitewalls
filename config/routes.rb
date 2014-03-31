@@ -6,5 +6,7 @@ Whitewalls::Application.routes.draw do
   root 'home#index'
 
   resources :artists, only: :show
+  
+  resources :artworks, only: :show
 
 end
