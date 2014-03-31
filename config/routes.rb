@@ -5,8 +5,8 @@ Whitewalls::Application.routes.draw do
 
   root 'home#index'
 
-  get 'home#about'
-  get 'home#contacts'
+  get 'about', to: 'home#about'
+  get 'contacts', to: 'home#contacts'
 
   resources :artists, only: :show
   
