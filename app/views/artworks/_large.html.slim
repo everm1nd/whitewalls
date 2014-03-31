@@ -1,6 +1,6 @@
 .large
-	.image=        image_tag(artwork.image.medium.url)
-	.author=       artwork.artist.name
-	.title=        artwork.title
+	.image=        link_to image_tag(artwork.image.medium.url), artwork
+	.author=       link_to artwork.artist.name, artwork.artist
+	.title=        link_to artwork.title, artwork
 	.description=  artwork.description
 	.price=        artwork.price

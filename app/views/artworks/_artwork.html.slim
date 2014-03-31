@@ -1,5 +1,5 @@
 .artwork
-	.image=  image_tag(artwork.image.preview.url)
+	.image=  link_to image_tag(artwork.image.preview.url), artwork
 	.artist= artwork.artist.name
-	.title=  artwork.title
+	.title=  link_to artwork.title, artwork
 	.price=  artwork.price
