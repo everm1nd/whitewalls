@@ -1,0 +1,4 @@
+@mixin font_museo_sans_cyrl($size:500) {
+  font-family: "museo_sans_cyrl_#{$size}", "Helvetica", "Arial", "Sans-Serif";
+  font-weight: $size;
+}

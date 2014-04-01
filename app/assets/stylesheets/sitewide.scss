@@ -1,0 +1,29 @@
+$color-black: #222;
+$color-white: #fff;
+
+$main-width: 950px;
+$artwork-width: 31%;
+$width: 100%;
+
+.other {
+  max-width: $main-width;
+  margin: 0 auto;
+
+  .artwork {
+    width: $artwork-width;
+    margin-right: ($width - $artwork-width*3)/2;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    @include font_museo_sans_cyrl(300);
+
+    img {
+      width: 100%;
+    }
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}
