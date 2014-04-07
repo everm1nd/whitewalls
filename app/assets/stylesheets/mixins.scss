@@ -2,3 +2,13 @@
   font-family: "museo_sans_cyrl_#{$size}", "Helvetica", "Arial", "Sans-Serif";
   font-weight: $size;
 }
+
+@mixin font_playfair_display_regular() {
+  font-family: "playfair_display_regular", "Helvetica", "Arial", "Sans-Serif";
+  font-weight: 500;
+}
+
+@mixin font_playfair_display_italic() {
+  font-family: "playfair_display_italic", "Helvetica", "Arial", "Sans-Serif";
+  font-weight: 500;
+}
