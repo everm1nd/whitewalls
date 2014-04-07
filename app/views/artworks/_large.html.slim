@@ -4,4 +4,4 @@
     .author= link_to artwork.artist.name, artwork.artist
     .title= link_to artwork.title, artwork
     .description= artwork.description
-    .price= artwork.price
+    .price= in_rubbles(artwork.price)
