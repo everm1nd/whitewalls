@@ -1,5 +1,5 @@
 ActiveAdmin.register Artwork do
-  permit_params :title, :description, :year, :price, :artist, :image
+  permit_params :title, :description, :year, :price, :artist_id, :image
 
   form multipart: true do |f|
     f.inputs "General" do
