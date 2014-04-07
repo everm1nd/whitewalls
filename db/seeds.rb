@@ -6,13 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-class ImageUploader < CarrierWave::Uploader::Base
-	# drop file extensions white list for image download
-  def extension_white_list
-  	nil
-  end
-end
-
 titles = ['Sun', 'Moon', 'Storm', 'Scream', 'Howl', 'Life and Death', 'Jupiter', 'Mars', 'Space', 'Tree', 'Face', 'Somebody', 'Lace']
 
 Artist.find_or_create_by_name('Von Goh')
