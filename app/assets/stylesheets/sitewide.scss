@@ -3,14 +3,53 @@
 
 $color-black: #222;
 $color-white: #fff;
+$color-banner: #FCF8FA;
 
-$main-width: 950px;
+$main-width: 1000px;
 $artwork-width: 31%;
 $width: 100%;
+$padding: 30px;
+
+$font-size-small: 0.875em;
+$font-size: 1em;
+$font-size-medium: 1.4em;
+$font-size-big: 1em;
+
+html {
+  overflow-y: scroll;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  font-size: $font-size;
+  @include font_museo_sans_cyrl(300);
+  background-color: $color-white;
+  color: $color-black;
+  -webkit-font-smoothing: antialiased;
+  margin: 0 auto;
+  min-width: 900px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.big {
+  background-color: $color-banner;
+  .large {
+    max-width: $main-width;
+    margin: 0 auto;
+    padding: $padding*1.5 $padding;
+  }
+}
 
 .other {
   max-width: $main-width;
   margin: 0 auto;
+  padding: $padding;
 
   .artwork {
     width: $artwork-width;
@@ -19,6 +58,7 @@ $width: 100%;
     overflow: hidden;
     position: relative;
     vertical-align: top;
+    margin-bottom: $padding*2;
     @include font_museo_sans_cyrl(300);
 
     img {
@@ -28,5 +68,33 @@ $width: 100%;
     &:nth-child(3n) {
       margin-right: 0;
     }
+  }
+}
+
+.header {
+  @include font_museo_sans_cyrl(500);
+  font-size: $font-size-medium;
+  padding: $padding;
+
+  img {
+    position: absolute;
+    top: 20px;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+  }
+
+  li {
+    display: inline-block;
+    &:first-child {
+      margin-right: $padding/1.5;
+    }
+  }
+
+  .menu-left {
+  }
+
+  .menu-right {
+    float: right;
   }
 }
