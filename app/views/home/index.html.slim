@@ -1,4 +1,6 @@
-h1 Принты от художников в Москве
+.image-wrapper
+  h1 Принты от художников в Москве
 - @artworks.in_groups_of(7, false) do |group|
 	= render 'artworks/group', group: group
-= paginate @artworks
+.pagination-wrapper
+  = paginate @artworks
