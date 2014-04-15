@@ -1,6 +1,10 @@
-.large
-	.image=        link_to image_tag(artwork.image.medium.url), artwork
-	.author=       link_to artwork.artist.name, artwork.artist
-	.title=        link_to artwork.title, artwork
-	.description=  artwork.description
-	.price=        artwork.price
+.big
+  .large
+    .wrapper
+      = link_to image_tag(artwork.image.medium.url), artwork, class: "link"
+      .content
+        = link_to artwork.artist.name, artwork.artist, class: "author"
+        = link_to artwork.title, artwork, class: "title"
+        .description= artwork.description
+        .price= in_rubbles(artwork.price)
+        = link_to "Заказать принт", 'mailto:feedback@third-place.ru', class: "buy"

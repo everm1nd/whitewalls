@@ -1,0 +1,13 @@
+"use strict";
+
+$cover = $("#image-wrapper")
+
+if $cover.length > 0
+
+  setFullPageHeight = (page) ->
+    viewportHeight = $(window).height()
+    $cover.next().css marginTop: viewportHeight
+
+  setFullPageHeight $cover
+  $(window).resize ->
+    setFullPageHeight $cover

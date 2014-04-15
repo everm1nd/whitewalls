@@ -1,5 +1,6 @@
-ul.menu
-	li Работы
-	li Блог
-	li О нас
-	li Контакты
+ul.menu-right
+  / li= link_to 'О нас', about_path
+  li= link_to 'Контакты', contacts_path
+ul.menu-left
+	li= link_to 'Работы', root_path
+	/ li Блог

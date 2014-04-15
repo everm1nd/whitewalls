@@ -1,4 +1,8 @@
-h1 Принты от художников в Москве
+#image-wrapper
+  .headline
+    h1 Принты от современных дизайнеров и художников
+    p Мы занимаемся выпуском и продажей работ современных художников, фотографов и иллюстраторов
 - @artworks.in_groups_of(7, false) do |group|
 	= render 'artworks/group', group: group
-= paginate @artworks
+.pagination-wrapper
+  = paginate @artworks
