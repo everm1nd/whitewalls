@@ -1,6 +1,11 @@
 ul.menu-right
-  / li= link_to 'О нас', about_path
-  li= link_to 'Контакты', contacts_path
+  li 
+    = image_tag("phone.svg")
+    .phone = "+7 916 706-40-36"
+  li
+    = image_tag("email.svg")
+    .email = link_to "hello@whitewallspro.com", 'mailto:hello@whitewallspro.com'
 ul.menu-left
-	li= link_to 'Работы', root_path
-	/ li Блог
+  li.logo= link_to image_tag("logo.svg"), root_path, class: "logo"
+  li= link_to 'Работы', root_path
+  li Блог

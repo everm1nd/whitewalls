@@ -4,7 +4,7 @@
 
 $color-black: #222;
 $color-white: #fff;
-$color-banner: #E9F9FD;
+$color-banner: #FFFFE8;
 $color-gray: #888;
 $color-gray-light: #eee;
 $color-gray-dark: #666;
@@ -211,23 +211,32 @@ ul {
   }
 }
 
+.header.home {
+  .logo {
+    display: none;
+  }
+}
+
 .header {
   @include font_museo_sans_cyrl(500);
-  font-size: 1.3em;
   padding: $padding;
   position: fixed;
   top: 0;
   right: 0;
   left: 0;
-  background-color: rgba(255,255,255,0.8);
+  background-color: rgba(255,255,255,0.6);
   z-index: 99999;
 
+  .logo {
+    img {
+      height: 30px;
+    }
+  }
+
   img {
-    position: absolute;
-    top: 16px;
-    width: 200px;
-    left: 50%;
-    margin-left: -100px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: $padding/3;
     &:hover {
       opacity: .7;
     }
@@ -235,13 +244,33 @@ ul {
 
   li {
     display: inline-block;
+    vertical-align: middle;
     z-index: 999;
-    &:first-child {
-      margin-right: $padding;
+    margin-right: $padding;
+    font-size: 1.3em;
+    img {
+      height: 20px;
+      display: inline-block;
+      width: auto;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+    img, .phone, .email {
+      display: inline-block;
+      vertical-align: bottom;
+    }
+    .phone, .email {
+      font-size: 16px;
     }
   }
 
-  .menu-left {
+  ul.menu-left {
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .menu-right {
@@ -342,7 +371,6 @@ ul {
       color: $color-gray;
       display: inline-block;
       margin-right: $padding;
-      font-size: $font-size-small;
     }
 
     .menu {
@@ -593,15 +621,14 @@ ul {
 #image-wrapper {
   text-align: center;
   color: $color-white;
-  height: 500px;
+  height: 600px;
   width: 100%;
-  background: image_url('main-img.jpg') no-repeat center center;
+  background: image_url('main-img2.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  margin-top: 84px;
 
   .headline {
-    top: 135px;
+    top: 200px;
     position: relative;
     color: $color-black;
     width: 700px;
@@ -614,78 +641,78 @@ ul {
     }
     p {
       font-size: 1.5em;
-      color: #333;
+      color: $color-gray;
       line-height: 1.7;
       margin-top: $padding/2;
     }
   }
 }
 
-.contacts {
-  background: linear-gradient(to top, #72C9ED, transparent);
-  margin-top: 84px;
-  .contacts-wrapper {
-    height: 480px;
-    max-width: $main-width;
-    margin: 0 auto;
-    padding: $padding*3 $padding 0;
-    h1 {
-      text-align: center;
-      font-size: 3.5em;
-    }
-    p {
-      font-size: 1.2em;
-      max-width: 400px;
-      text-align: center;
-      @include font_museo_sans_cyrl(300);
-      margin: 0 auto;
-      line-height: 1.7;
-      margin-top: $padding/2;
-    }
-    .phone, .email {
-      @include font_museo_sans_cyrl(500);
-      text-align: center;
-      color: $color-black;
-      margin-top: $padding;
-      font-size: 1.5em;
-    }
-    .email {
-      margin-top: $padding/1.5;
-    }
-  }
-  .social {
-    text-align: center;
-    margin-top: $padding;
+// .contacts {
+//   background: linear-gradient(to top, #72C9ED, transparent);
+//   margin-top: 84px;
+//   .contacts-wrapper {
+//     height: 480px;
+//     max-width: $main-width;
+//     margin: 0 auto;
+//     padding: $padding*3 $padding 0;
+//     h1 {
+//       text-align: center;
+//       font-size: 3.5em;
+//     }
+//     p {
+//       font-size: 1.2em;
+//       max-width: 400px;
+//       text-align: center;
+//       @include font_museo_sans_cyrl(300);
+//       margin: 0 auto;
+//       line-height: 1.7;
+//       margin-top: $padding/2;
+//     }
+//     .phone, .email {
+//       @include font_museo_sans_cyrl(500);
+//       text-align: center;
+//       color: $color-black;
+//       margin-top: $padding;
+//       font-size: 1.5em;
+//     }
+//     .email {
+//       margin-top: $padding/1.5;
+//     }
+//   }
+//   .social {
+//     text-align: center;
+//     margin-top: $padding;
 
-    li {
-      display: inline-block;
-      margin-right: 10px;
-      padding-bottom: 0;
-      &:last-child {
-        margin-right: 0;
-      }
+//     li {
+//       display: inline-block;
+//       margin-right: 10px;
+//       padding-bottom: 0;
+//       &:last-child {
+//         margin-right: 0;
+//       }
 
-      a {
-        color: $color-white;
-        font-family: 'icomoon';
-        padding-bottom: 0;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 100px;
-        display: inline-block;
-      }
-    }
+//       a {
+//         color: $color-white;
+//         font-family: 'icomoon';
+//         padding-bottom: 0;
+//         padding: 10px;
+//         font-size: 16px;
+//         border-radius: 100px;
+//         display: inline-block;
+//       }
+//     }
 
-    .fb {
-      background-color: #3D5A99;
-    }
+//     .fb {
+//       background-color: #3D5A99;
+//     }
 
-    .tw {
-      background-color: #3A96FF;
-    }
+//     .tw {
+//       background-color: #3A96FF;
+//     }
 
-    .vk {
-      background-color: #5D7EA2;
-    }    
-  }
-}
+//     .vk {
+//       background-color: #5D7EA2;
+//     }    
+//   }
+// }
