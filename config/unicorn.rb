@@ -1,6 +1,6 @@
 # config/unicorn.rb
 # Set environment to production unless something else is specified
-user 'unicorn', 'root'
+user 'admin', 'root'
 
 env = ENV["RAILS_ENV"] || "production"
 
