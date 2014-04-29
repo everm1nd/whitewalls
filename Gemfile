@@ -27,7 +27,7 @@ gem 'kaminari'
 gem 'unicorn'
 
 group :development do
-	gem 'capistrano'
+	gem 'recap', '~> 1.0.0'
 	gem 'debugger'
 	gem 'rspec-rails', '~> 3.0.0.beta'
 end
