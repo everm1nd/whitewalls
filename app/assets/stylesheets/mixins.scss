@@ -1,3 +1,9 @@
+$support-moz:    true;
+$support-webkit: true;
+$support-ms:     true;
+$support-o:      true;
+$support-def:    true;
+
 @mixin font_museo_sans_cyrl($size:500) {
   font-family: "museo_sans_cyrl_#{$size}", "Helvetica", "Arial", "Sans-Serif";
   font-weight: $size;
@@ -11,4 +17,26 @@
 @mixin font_playfair_display_italic() {
   font-family: "playfair_display_italic", "Helvetica", "Arial", "Sans-Serif";
   font-weight: 500;
+}
+
+@mixin сross-browser($key, $value) {
+  @if $support-moz {
+    -moz-#{$key}: #{$value};
+  }
+  @if $support-webkit {
+    -webkit-#{$key}: #{$value};
+  }
+  @if $support-ms {
+    -ms-#{$key}: #{$value};
+  }
+  @if $support-o {
+    -o-#{$key}: #{$value};
+  }
+  @if $support-def {
+    #{$key}: #{$value};
+  }
+}
+
+@mixin transition($text) {
+  @include сross-browser("transition", $text);
 }
