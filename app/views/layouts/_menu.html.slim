@@ -1,12 +1,17 @@
 ul.menu-right
-  li 
-    = image_tag("phone.svg")
-    .phone = "+7 916 706-40-36"
-  li
-    = image_tag("email.svg")
-    .email = link_to "hello@whitewallspro.com", 'mailto:hello@whitewallspro.com'
+  li#about-popup value="Popup!"
+    = "О нас"
+  li Контакты
+/ ul.menu-right
+/   li 
+/     = image_tag("phone.svg")
+/     .phone = "+7 916 706-40-36"
+/   li
+/     = image_tag("email.svg")
+/     .email = link_to "hello@whitewallspro.com", 'mailto:hello@whitewallspro.com'
 ul.menu-left
   li.logo class="page-#{current_page}"
     = link_to image_tag("logo.svg"), root_path, class: "logo"
   li= link_to 'Работы', root_path
   / li Блог
+= render 'layouts/about_popup'

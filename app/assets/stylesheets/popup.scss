@@ -1,0 +1,33 @@
+$color-gray-light: #eee;
+$about-popup-width: 500px;
+$about-popup-color: #4dccf8;
+$padding: 30px;
+
+
+.transparent {
+  background-color: $color-gray-light;
+  opacity: .6;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.about-popup {
+  width: $about-popup-width;
+  background-color: $about-popup-color;
+  position: absolute;
+  top: 230px;
+  height: auto;
+  left: 50%;
+  margin-left: -($about-popup-width/2 + $padding*1.5+5px);
+  padding: $padding*1.5 $padding*1.5+5px;
+}
+
+.about-text {
+  @include font_museo_sans_cyrl(500);
+  font-size: 1.4em;
+  color: white;
+  line-height: 1.5;
+}
