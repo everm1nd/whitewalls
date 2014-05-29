@@ -10,6 +10,6 @@ $(document).ready ->
     $(p).css "display", "none"  if e.target is this
     return
 
-  $(".popup__close").click ->
+  $(".popup-close").click ->
     p.css "display", "none"
     return
