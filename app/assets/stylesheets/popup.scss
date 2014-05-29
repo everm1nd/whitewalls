@@ -3,6 +3,9 @@ $about-popup-width: 500px;
 $about-popup-color: #4dccf8;
 $padding: 30px;
 
+.popup-wrapper {
+  display: none;
+}
 
 .transparent {
   background-color: $color-gray-light;
