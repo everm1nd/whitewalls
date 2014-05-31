@@ -3,7 +3,13 @@
     .logo = image_tag("logo.svg")
     h1 Принты от современных дизайнеров и художников
     p Мы занимаемся выпуском и продажей работ современных художников, фотографов и иллюстраторов
-- @artworks.in_groups_of(7, false) do |group|
-	= render 'artworks/group', group: group
-.pagination-wrapper
-  = paginate @artworks
+.featured-artowrks
+	- banner_artworks = @featured_artworks.shift(4)
+	.banner
+		- banner_artworks.each do |artwork|
+			= render artwork
+	.list
+		- @featured_artworks.each do |artwork|
+			= render artwork
+.centered-link-wrapper
+  a =link_to 'Все работы', artworks_path
