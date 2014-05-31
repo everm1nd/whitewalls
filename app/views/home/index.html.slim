@@ -1,8 +1,8 @@
 .image-wrapper class="page-#{current_page}"
   .headline
-    .logo = image_tag("logo.svg")
-    h1 Принты от современных дизайнеров и художников
-    p Мы занимаемся выпуском и продажей работ современных художников, фотографов и иллюстраторов
+    / .logo = image_tag("logo.svg")
+    / h1 Принты от современных дизайнеров и художников
+    / p Мы занимаемся выпуском и продажей работ современных художников, фотографов и иллюстраторов
 - @artworks.in_groups_of(7, false) do |group|
 	= render 'artworks/group', group: group
 .pagination-wrapper
