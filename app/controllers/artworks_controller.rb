@@ -1,4 +1,8 @@
 class ArtworksController < ApplicationController
+  def index
+  	@artworks = Artwork.newest.page params[:page]
+  end
+
   def show
   	# TODO: refactor this with scopes or any
   	@artwork      = Artwork.find params[:id]

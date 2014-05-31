@@ -9,6 +9,6 @@ Whitewalls::Application.routes.draw do
 
   resources :artists, only: :show
   
-  resources :artworks, only: :show
+  resources :artworks, only: [:index, :show]
 
 end

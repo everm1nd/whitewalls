@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@artworks = Artwork.newest.page params[:page]
+  	@featured_artworks = Artwork.newest.featured.limit(13)
   end
 
   def about
