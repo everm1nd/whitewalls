@@ -8,29 +8,30 @@ $padding: 30px;
 }
 
 .transparent {
-  background-color: $color-gray-light;
-  opacity: .6;
+  background-color: $about-popup-color;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  z-index: 999999;
 }
 
 .about-popup {
   width: $about-popup-width;
-  background-color: $about-popup-color;
+  background-color: white;
   position: absolute;
   top: 230px;
   height: auto;
   left: 50%;
   margin-left: -($about-popup-width/2 + $padding*1.5+5px);
   padding: $padding*1.5 $padding*1.5+5px;
+  z-index: 9999999;
 }
 
 .about-text {
   @include font_museo_sans_cyrl(500);
   font-size: 1.4em;
-  color: white;
+  color: #222;
   line-height: 1.5;
 }
