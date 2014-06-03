@@ -1,15 +1,15 @@
 $(document).ready ->
-  init = ->
-    window.addEventListener "scroll", (e) ->
-      distanceY = window.pageYOffset or document.documentElement.scrollTop
-      shrinkOn = 160
-      header = document.querySelector(".header .home")
-
-      if distanceY > shrinkOn
-        header.setAttribute "class", "transparent-header"
-      else
-        header.removeAttribute "class"
-      return
-
+  $ ->
+  header = $(".header.home")
+  menu = $(".header ul li")
+  $(window).scroll ->
+    scroll = $(window).scrollTop()
+    if scroll >= 100
+      header.addClass "transparent-header"
+      menu.removeClass "transparent-menu"
+    else
+      header.removeClass("transparent-header")
+      menu.addClass "transparent-menu"
     return
-  window.onload = init()
+
+  return
