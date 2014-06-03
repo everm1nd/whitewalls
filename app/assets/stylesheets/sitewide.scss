@@ -216,7 +216,6 @@ ul {
 
 .smaller {
   top: 10px !important;
-  @include transition(all .5s ease);
   height: 40px !important;
 }
 
@@ -240,12 +239,26 @@ ul {
     position: absolute;
     right: 0;
     left: 0;
-    top: 200px;
+    top: 180px;
     @include transition(all .5s ease);
   }
   li {
-    font-size: $font-size;
+    font-size: 1.1em;
+    margin-right: 0;
+    cursor: pointer;
+    &:hover {
+      color: $color-link;
+      @include transition(all .2s ease);
+    }
   }
+  .transparent-menu {
+    background-color: rgba(255,255,255, 0.7);
+    padding: 10px 15px;
+  }
+}
+
+.transparent-header {
+  background-color: rgba(255,255,255, 0.7);
 }
 
 .header {
@@ -661,7 +674,7 @@ ul {
   display: block;
   height: 450px;
   width: 100%;
-  background: image_url('main-img2.png') no-repeat center center;
+  background: image_url('main-img2.jpg') no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
 

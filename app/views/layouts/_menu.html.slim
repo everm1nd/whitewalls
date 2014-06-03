@@ -1,9 +1,9 @@
 ul.menu-right
-  li#about-popup
+  li#about-popup.transparent-menu
     = "О нас"
-  li Контакты
+  li.transparent-menu Контакты
 .logo class="page-#{current_page}"
   = link_to image_tag("logo.svg"), root_path
 ul.menu-left
-  li= link_to 'Работы', root_path
-  / li Блог
+  li.transparent-menu = link_to 'Все работы', artworks_path
+  li.transparent-menu Блог

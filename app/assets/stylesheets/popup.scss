@@ -1,10 +1,11 @@
 $color-gray-light: #eee;
-$about-popup-width: 500px;
+$about-popup-width: 700px;
 $about-popup-color: #4dccf8;
 $padding: 30px;
 
 .popup-wrapper {
   display: none;
+  @include transition(all .5s ease);
 }
 
 .transparent {
@@ -15,6 +16,21 @@ $padding: 30px;
   bottom: 0;
   left: 0;
   z-index: 999999;
+}
+
+.popup-close {
+  z-index: 9999999;
+  position: absolute;
+  top: $padding;
+  right: $padding;
+  cursor: pointer;
+  img {
+    width: 50px;
+    @include transition(all .2s ease);
+    &:hover {
+      opacity: .5;
+    }
+  }
 }
 
 .about-popup {
@@ -31,7 +47,8 @@ $padding: 30px;
 
 .about-text {
   @include font_museo_sans_cyrl(500);
-  font-size: 1.4em;
+  font-size: 1.5em;
   color: #222;
   line-height: 1.5;
+  text-align: center;
 }

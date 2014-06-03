@@ -2,13 +2,13 @@ $(document).ready ->
   init = ->
     window.addEventListener "scroll", (e) ->
       distanceY = window.pageYOffset or document.documentElement.scrollTop
-      shrinkOn = 60
-      logotype = document.querySelector(".logo img")
+      shrinkOn = 160
+      header = document.querySelector(".header .home")
 
       if distanceY > shrinkOn
-        logotype.setAttribute "class", "smaller"
+        header.setAttribute "class", "transparent-header"
       else
-        logotype.removeAttribute "class"
+        header.removeAttribute "class"
       return
 
     return
