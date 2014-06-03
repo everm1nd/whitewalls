@@ -6,8 +6,9 @@
 .featured-artowrks
 	- banner_artworks = @featured_artworks.shift(4)
 	.banner
+		ul
 		- banner_artworks.each do |artwork|
-			= render artwork
+			li= render artwork
 	.list
 		- @featured_artworks.each do |artwork|
 			= render artwork
