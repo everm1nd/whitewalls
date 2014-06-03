@@ -270,24 +270,29 @@ ul {
 
 .header {
   @include font_museo_sans_cyrl(500);
-  padding: $padding;
+  padding: 30px;
   position: relative;
   background-color: rgba(255,255,255,0.6);
   z-index: 99999;
   @include transition(all .2s ease);
 
   .logo {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
     img {
-      height: 30px;
-    }
-  }
-
-  img {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: $padding/3;
-    &:hover {
-      opacity: .7;
+      height: 50px;
+      position: absolute;
+      top: 15px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      @include transition(all .3s ease);
+      &:hover {
+        opacity: .7;
+      }
     }
   }
 
@@ -295,8 +300,8 @@ ul {
     display: inline-block;
     vertical-align: middle;
     z-index: 999;
-    margin-right: $padding;
-    font-size: 1.3em;
+    margin-right: 20px;
+    font-size: 1.2em;
     cursor: pointer;
     @include transition(all .5s ease);
     &:hover {
@@ -313,13 +318,6 @@ ul {
     }
     &:last-child {
       margin-right: 0;
-    }
-    img, .phone, .email {
-      display: inline-block;
-      vertical-align: bottom;
-    }
-    .phone, .email {
-      font-size: 16px;
     }
   }
 
