@@ -1,3 +1,6 @@
-$(document).ready ->
+init =  ->
+  $p = -> $(".popup-wrapper-contacts")
   $(".image-link").magnificPopup type: "image"
-  return
+ 
+$ -> init()
+$(document).on 'page:change', init

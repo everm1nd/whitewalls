@@ -1,15 +1,16 @@
-$(document).ready ->
-  p = $(".popup-wrapper")
+$ ->
+  $p = -> $(".popup-wrapper")
 
-  $("#about-popup").click ->
-    p.css "display", "block"
+  $document = $(document)
+
+  $document.on 'click', ".popup-close", ->
+    $p().css "display", "none"
     return
 
-  $(".popup-wrapper .transparent").click (event) ->
-    e = event or window.event
-    $(p).css "display", "none"  if e.target is this
+  $document.on 'click', "popup-wrapper .transparent", (e) ->
+    $p().css "display", "none"  if e.target is this
     return
 
-  $(".popup-close").click ->
-    p.css "display", "none"
+  $document.on 'click', "#about-popup", ->
+    $p().css "display", "block"
     return

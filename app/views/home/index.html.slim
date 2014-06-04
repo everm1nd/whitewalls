@@ -4,14 +4,21 @@
     / h1 Принты от современных дизайнеров и художников
     / p Мы занимаемся выпуском и продажей работ современных художников, фотографов и иллюстраторов
 .featured-artowrks
-	- banner_artworks = @featured_artworks.shift(4)
-	.banner
-    .jcarousel
-  		ul
-    		- banner_artworks.each do |artwork|
-    			li= render artwork
-	.list
-		- @featured_artworks.each do |artwork|
-			= render artwork
+  - banner_artworks = @featured_artworks.shift(4)
+  .banner
+    .jcarousel-wrapper
+      .jcarousel
+        ul
+          - banner_artworks.each do |artwork|
+            li.big= render artwork
+
+      a.jcarousel-control-prev href="#" &lsaquo;
+      a.jcarousel-control-next href="#" &rsaquo;
+      
+      p.jcarousel-pagination
+
+  .list
+    - @featured_artworks.each do |artwork|
+      = render artwork
 .centered-link-wrapper
   a =link_to 'Все работы', artworks_path
