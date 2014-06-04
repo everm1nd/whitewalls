@@ -21,6 +21,14 @@ init = ->
     $(this).removeClass "active"
     return
   ).jcarouselPagination()
+  resize()
+
+resize = ->
+  $(".jcarousel li").each (index) ->
+    $li = $ @
+    $li.css
+      width: window.innerWidth
 
 $ -> init()
 $(document).on 'page:change', init
+$(window).on 'resize', resize

@@ -3,6 +3,7 @@
     / .logo = image_tag("logo.svg")
     / h1 Принты от современных дизайнеров и художников
     / p Мы занимаемся выпуском и продажей работ современных художников, фотографов и иллюстраторов
+h1.best-works Лучшие работы
 .featured-artowrks
   - banner_artworks = @featured_artworks.shift(4)
   .banner
@@ -10,10 +11,10 @@
       .jcarousel
         ul
           - banner_artworks.each do |artwork|
-            li.big= render artwork
-
-      a.jcarousel-control-prev href="#" &lsaquo;
-      a.jcarousel-control-next href="#" &rsaquo;
+            li.big
+              .artwork style="background: url(#{artwork.image.preview.url} ) no-repeat center center; background-size: cover;"
+                = link_to artwork.artist.name, artwork, class: "artist"
+                = link_to artwork.title, artwork, class: "title"
       
       p.jcarousel-pagination
 
@@ -21,4 +22,4 @@
     - @featured_artworks.each do |artwork|
       = render artwork
 .centered-link-wrapper
-  a =link_to 'Все работы', artworks_path
+  =link_to 'Все работы', artworks_path

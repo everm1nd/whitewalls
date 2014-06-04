@@ -3,6 +3,8 @@ $support-webkit: true;
 $support-ms:     true;
 $support-o:      true;
 $support-def:    true;
+$color-link: #456fee;
+$color-white: #fff;
 
 @mixin font_museo_sans_cyrl($size:500) {
   font-family: "museo_sans_cyrl_#{$size}", "Helvetica", "Arial", "Sans-Serif";
@@ -17,6 +19,23 @@ $support-def:    true;
 @mixin font_playfair_display_italic() {
   font-family: "playfair_display_italic", "Helvetica", "Arial", "Sans-Serif";
   font-weight: 500;
+}
+
+@mixin button {
+  padding: 15px;
+  border: 2px solid $color-link;
+  @include font_museo_sans_cyrl(500);
+  font-size: $font-size-medium;
+  color: $color-link;
+  width: 140px;
+  margin-top: 20px;
+  text-align: center;
+  @include transition(all .2s ease);
+
+  &:hover {
+    background-color: $color-link;
+    color: $color-white;
+  }
 }
 
 @mixin сross-browser($key, $value) {
