@@ -1,20 +1,22 @@
 .image-wrapper class="page-#{current_page}"
+  .gradient
   .headline
-    / .logo = image_tag("logo.svg")
-    / h1 Принты от современных дизайнеров и художников
-    / p Мы занимаемся выпуском и продажей работ современных художников, фотографов и иллюстраторов
-h1.best-works Лучшие работы
+    h1 Принты от современных дизайнеров и художников
 .featured-artowrks
-  - banner_artworks = @featured_artworks.shift(4)
+  - banner_artworks = @featured_artworks.shift(5)
   .banner
     .jcarousel-wrapper
       .jcarousel
         ul
           - banner_artworks.each do |artwork|
             li.big
-              .artwork style="background: url(#{artwork.image.preview.url} ) no-repeat center center; background-size: cover;"
-                = link_to artwork.artist.name, artwork, class: "artist"
-                = link_to artwork.title, artwork, class: "title"
+              .artwork-wrapper
+                .artwork
+                  .image= link_to image_tag(artwork.image.preview.url), artwork
+                  .links
+                    = link_to artwork.artist.name, artwork, class: "artist"
+                    = link_to artwork.title, artwork, class: "title"
+                    = link_to in_rubbles(artwork.price), artwork, class: "price"
       
       p.jcarousel-pagination
 

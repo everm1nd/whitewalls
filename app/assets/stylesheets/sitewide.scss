@@ -324,6 +324,12 @@ ul {
   ul.menu-left {
     display: inline-block;
     vertical-align: middle;
+    .active {
+      color: $color-gray;
+      border-top: 3px solid $color-gray-light;
+      padding-top: 27px;
+      margin-top: -31px;
+    }
   }
 
   .menu-right {
@@ -692,6 +698,17 @@ ul {
   display: none;
 }
 
+.gradient {
+  height: 90px;
+  width: 100%;
+  position: absolute;
+  top: 370px;
+  right: 0;
+  left: 0;
+  background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
+  opacity: .4;
+}
+
 .image-wrapper.page-1 {
   text-align: center;
   color: $color-white;
@@ -710,14 +727,14 @@ ul {
   }
 
   .headline {
-    top: 200px;
     position: relative;
-    color: $color-black;
-    width: 600px;
+    color: $color-white;
+    width: 760px;
+    top: 400px;
     left: 50%;
-    margin-left: -300px;
+    margin-left: -380px;
     h1 {
-      font-size: 2.5em;
+      font-size: 1.5em;
       @include font_museo_sans_cyrl(300);
       line-height: 1.3;
     }
@@ -728,82 +745,6 @@ ul {
       margin-top: $padding/2;
     }
   }
-}
-
-// .contacts {
-//   background: linear-gradient(to top, #72C9ED, transparent);
-//   margin-top: 84px;
-//   .contacts-wrapper {
-//     height: 480px;
-//     max-width: $main-width;
-//     margin: 0 auto;
-//     padding: $padding*3 $padding 0;
-//     h1 {
-//       text-align: center;
-//       font-size: 3.5em;
-//     }
-//     p {
-//       font-size: 1.2em;
-//       max-width: 400px;
-//       text-align: center;
-//       @include font_museo_sans_cyrl(300);
-//       margin: 0 auto;
-//       line-height: 1.7;
-//       margin-top: $padding/2;
-//     }
-//     .phone, .email {
-//       @include font_museo_sans_cyrl(500);
-//       text-align: center;
-//       color: $color-black;
-//       margin-top: $padding;
-//       font-size: 1.5em;
-//     }
-//     .email {
-//       margin-top: $padding/1.5;
-//     }
-//   }
-//   .social {
-//     text-align: center;
-//     margin-top: $padding;
-
-//     li {
-//       display: inline-block;
-//       margin-right: 10px;
-//       padding-bottom: 0;
-//       &:last-child {
-//         margin-right: 0;
-//       }
-
-//       a {
-//         color: $color-white;
-//         font-family: 'icomoon';
-//         padding-bottom: 0;
-//         padding: 10px;
-//         font-size: 16px;
-//         border-radius: 100px;
-//         display: inline-block;
-//       }
-//     }
-
-//     .fb {
-//       background-color: #3D5A99;
-//     }
-
-//     .tw {
-//       background-color: #3A96FF;
-//     }
-
-//     .vk {
-//       background-color: #5D7EA2;
-//     }    
-//   }
-// }
-
-
-.best-works {
-  text-align: center;
-  font-size: 4em;
-  margin: $padding*2 auto $padding;
 }
 
 .centered-link-wrapper {
@@ -891,27 +832,63 @@ ul {
 .jcarousel li {
   float: left;
   width: 100%;
+  .artwork-wrapper { width: 100%; }
   .artwork {
+    max-width: $main-width;
     margin: 0 auto;
     width: 100%;
     height: 500px;
+  }
+  .image {
+    width: 46%;
+    margin-right: 4%;
+    margin-top: 43px;
+    img {
+      width: 100%;
+    }
+  }
+  .links {
+    width: 50%;
+  }
+  .links, .image {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .artist {
+    color: $color-gray;
+    font-size: $font-size-medium;
+  }
+
+  .title {
+    @include font_museo_sans_cyrl(500);
+    font-size: 2.7em;
+    line-height: 1.3;
+    margin-top: 7px;
+    margin-bottom: 6px;
+  }
+
+  .price {
+    @include font_museo_sans_cyrl(300);
+    font-size: 1em;
+    margin-top: 14px;
+    color: $color-gray;
   }
 }
 
 .jcarousel-pagination {
   text-align: center;
-  padding: 5px 0 15px;
-  border-bottom: 1px solid $color-gray-light;
+  padding: 5px 0 20px;
   margin-bottom: $padding*1.5;
+  background-color: $color-banner;
   .active {
-    background-color: #ccc;
-    color: #ccc;
+    background-color: #999;
+    color: #999;
   }
   a {
     color: white;
     font-size: 1px;
-    background-color: white;
-    border: 2px solid #ccc;
+    background-color: $color-banner;
+    border: 2px solid #999;
     border-radius: 100px;
     display: inline-block;
     padding: 6px;
