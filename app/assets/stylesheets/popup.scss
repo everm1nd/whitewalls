@@ -55,7 +55,7 @@ $padding: 30px;
 
 .popup-close {
   z-index: 9999999;
-  position: absolute;
+  position: fixed;
   top: $padding;
   right: $padding;
   cursor: pointer;
@@ -76,7 +76,7 @@ $padding: 30px;
 .about-popup {
   width: $about-popup-width;
   background-color: white;
-  position: absolute;
+  position: fixed;
   top: 100px;
   height: auto;
   left: 50%;
