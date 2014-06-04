@@ -135,8 +135,8 @@ button::-moz-focus-inner {
 
 .mfp-close {
   position: absolute;
-  right: 30px;
-  top: 30px;
+  right: 20px;
+  top: 20px;
   z-index: 999999999;
   .mfp-close:hover, .mfp-close:focus {
     opacity: .6; }

@@ -1,11 +1,46 @@
 $color-gray-light: #eee;
-$about-popup-width: 700px;
-$about-popup-color: #4dccf8;
+$about-popup-width: 800px;
+$contacts-popup-width: 600px;
+$about-popup-color: #58c6eb;
 $padding: 30px;
 
 .popup-wrapper {
   display: none;
   @include transition(all .5s ease);
+  .logo {
+    z-index: 999999;
+    text-align: center;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  h1 {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    left: 0;
+    z-index: 9999999;
+    text-align: center;
+    color: white;
+    font-size: 3em;
+  }
+}
+
+.popup-wrapper-contacts {
+  display: none;
+  .phone, .email, .facebook {
+    font-size: 1.5em;
+    @include font_museo_sans_cyrl(500);
+    text-align: center;
+    margin-top: $padding/1.5;
+  }
+  .phone {
+    font-size: 4.2em;
+    margin-top: 20px;
+  }
 }
 
 .transparent {
@@ -33,22 +68,43 @@ $padding: 30px;
   }
 }
 
+.about-popup.contacts-popup {
+  width: $contacts-popup-width;
+  margin-left: -($contacts-popup-width/2 + $padding*1.5+5px);
+}
+
 .about-popup {
   width: $about-popup-width;
   background-color: white;
   position: absolute;
-  top: 230px;
+  top: 100px;
   height: auto;
   left: 50%;
   margin-left: -($about-popup-width/2 + $padding*1.5+5px);
-  padding: $padding*1.5 $padding*1.5+5px;
+  padding: $padding*2 $padding*2+5px;
   z-index: 9999999;
 }
 
+.about-text.contacts {
+  font-size: 1.2em;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  @include font_museo_sans_cyrl(300);
+  text-align: center;
+}
+
 .about-text {
-  @include font_museo_sans_cyrl(500);
-  font-size: 1.5em;
+  @include font_museo_sans_cyrl(300);
+  font-size: 2.2em;
   color: #222;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
+}
+
+p {
+  padding-top: $padding/1.5;
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: #444;
 }
