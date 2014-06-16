@@ -1,0 +1,7 @@
+.collection
+  .image= image_tag @collection.image.url
+  .title= @collection.title
+  .description= @collection.description
+  .artworks
+    - @collection.artworks.each do |artwork|
+      = render artwork

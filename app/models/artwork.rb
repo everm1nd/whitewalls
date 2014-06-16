@@ -9,4 +9,6 @@ class Artwork < ActiveRecord::Base
 
 	scope :newest, order: 'created_at DESC'
 	scope :featured, where(featured: true)
+
+	belongs_to :collection
 end

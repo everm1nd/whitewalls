@@ -2,11 +2,12 @@
   .gradient
   .headline
     h1 Принты от современных дизайнеров и художников
+h2 Коллекции
 .collections
   - @collections.each do |collection|
     .collection
-      .image= image_tag collection.image.url
-      .title= collection.title
+      .image= link_to image_tag(collection.image.url), collection_path(collection)
+      .title= link_to collection.title, collection_path(collection)
       .description= collection.description
 .centered-link-wrapper
   =link_to 'Все работы', artworks_path
