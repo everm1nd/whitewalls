@@ -2,26 +2,11 @@
   .gradient
   .headline
     h1 Принты от современных дизайнеров и художников
-.featured-artowrks
-  - banner_artworks = @featured_artworks.shift(5)
-  .banner
-    .jcarousel-wrapper
-      .jcarousel
-        ul
-          - banner_artworks.each do |artwork|
-            li.big
-              .artwork-wrapper
-                .artwork
-                  .image= link_to image_tag(artwork.image.preview.url), artwork
-                  .links
-                    = link_to artwork.artist.name, artwork, class: "artist"
-                    = link_to artwork.title, artwork, class: "title"
-                    = link_to in_rubbles(artwork.price), artwork, class: "price"
-      
-      p.jcarousel-pagination
-
-  .list
-    - @featured_artworks.each do |artwork|
-      = render artwork
+.collections
+  - @collections.each do |collection|
+    .collection
+      .image= image_tag collection.image.url
+      .title= collection.title
+      .description= collection.description
 .centered-link-wrapper
   =link_to 'Все работы', artworks_path
