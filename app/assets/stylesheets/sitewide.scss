@@ -206,6 +206,9 @@ ul {
 
     img {
       width: 100%;
+      &:hover {
+        opacity: .9;
+      }
     }
 
     &:nth-child(3n) {
@@ -626,6 +629,9 @@ ul {
 
       img {
         width: 100%;
+        &:hover {
+          opacity: .9;
+        }
       }
     }
 
@@ -801,6 +807,9 @@ ul {
 
     img {
       width: 100%;
+      &:hover {
+        opacity: .9;
+      }
     }
   }
 }
@@ -886,13 +895,14 @@ ul {
   }
   a {
     color: white;
-    font-size: 1px;
+    font-size: 0px;
     background-color: $color-banner;
     border: 2px solid #999;
     border-radius: 100px;
     display: inline-block;
     padding: 6px;
     margin-right: 8px;
+    line-height: .1;
     &:last-child {
       margin-right: 0;
     }
