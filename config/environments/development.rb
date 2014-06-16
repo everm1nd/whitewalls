@@ -26,4 +26,14 @@ Whitewalls::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  config.action_mailer.smtp_settings = {
+    :address   => "smtp.mandrillapp.com",
+    :port      => 587,
+    :enable_starttls_auto => true, # detects and uses STARTTLS
+    :user_name => "everm1nd.mail@gmail.com",
+    :password  => "qAHgK4UxFO25PXwC8jVvcQ", # SMTP password is any valid API key
+    :authentication => 'login', # Mandrill supports 'plain' or 'login'
+    :domain => 'google.com', # your domain to identify your server when connecting
+  }
 end
