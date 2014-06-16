@@ -1,5 +1,5 @@
 ActiveAdmin.register Artwork do
-  permit_params :title, :description, :year, :price, :artist_id, :image, :featured, :collection_id
+  permit_params :title, :description, :year, :price, :artist_id, :image, :collection_id
 
   form multipart: true do |f|
     f.inputs "General" do
@@ -8,7 +8,6 @@ ActiveAdmin.register Artwork do
       f.input :year
       f.input :price
       f.input :artist
-      f.input :featured
       f.input :collection
       f.input :image, as: :file, hint: f.template.image_tag(f.object.image.url) 
     end
