@@ -6,3 +6,5 @@ h2 Ура! У Вас новый заказ!
   .span Имя: #{ @order.name }
   .span Email: #{ @order.email }
   .span Адрес: #{ @order.address }
+- unless @order.comment.empty?
+	.comment Также пользователь оставил комментарий: "#{ @order.comment }"
