@@ -143,7 +143,7 @@ ul {
         color: $color-black;
       }
 
-      a.buy {
+      .buy {
         padding: 15px;
         border: 2px solid $color-link;
         @include font_museo_sans_cyrl(500);
@@ -152,11 +152,12 @@ ul {
         width: 140px;
         margin-top: 20px;
         text-align: center;
+        cursor: pointer;
         @include transition(all .2s ease);
 
         &:hover {
           background-color: $color-link;
-          color: $color-white;
+          color: $color-banner;
         }
       }
     }

@@ -5,10 +5,11 @@ html
     = stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
-    = favicon_link_tag '/assets/images/favicon.ico'
+    = favicon_link_tag 'favicon.ico'
   body
   	= render 'layouts/header'
     .content = yield
     = render 'layouts/footer'
     = render 'layouts/about_popup'
     = render 'layouts/contacts_popup'
+    = render 'layouts/buy_popup'

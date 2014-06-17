@@ -7,7 +7,7 @@ $ ->
     $p().css "display", "none"
     return
 
-  $document.on 'click', "popup-wrapper .transparent", (e) ->
+  $document.on 'click', ".transparent", (e) ->
     $p().css "display", "none"  if e.target is this
     return
 

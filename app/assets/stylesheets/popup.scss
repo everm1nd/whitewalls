@@ -1,8 +1,12 @@
+@import "mixins";
+
 $color-gray-light: #eee;
 $about-popup-width: 800px;
 $contacts-popup-width: 600px;
 $about-popup-color: #58c6eb;
 $padding: 30px;
+
+$font-size-medium: 1.1em;
 
 .popup-wrapper {
   display: none;
@@ -51,6 +55,7 @@ $padding: 30px;
   bottom: 0;
   left: 0;
   z-index: 999999;
+  cursor: pointer;
 }
 
 .popup-close {
@@ -112,4 +117,43 @@ p {
   line-height: 1.8;
   font-size: 1.1em;
   color: #444;
+}
+
+
+.popup-wrapper-buy {
+  // display: none;
+  .transparent {
+    background-color: rgba(0, 0, 0, .7);
+    cursor: pointer;
+  }
+  .buy-form {
+    position: absolute;
+    top: 100px; right: 0; left: 0;
+    width: 350px;
+    background-color: white;
+    z-index: 999999;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: $padding;
+    h2 {
+      font-size: 1.6em;
+      width: 100%;
+      text-align: center;
+      line-height: 1;
+      border-bottom: 1px solid #eee;
+      padding-bottom: $padding/2;
+    }
+    .form {
+      width: 100%;
+      margin-top: $padding/2;
+    }
+    .title {
+      font-size: .875em;
+      color: #222;
+    }
+    .buy {
+      @include button;
+      width: auto;
+    }
+  }
 }

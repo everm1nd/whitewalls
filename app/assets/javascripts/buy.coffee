@@ -1,5 +1,5 @@
 $ ->
-  $p = -> $(".popup-wrapper-contacts")
+  $p = -> $(".popup-wrapper-buy")
 
   $document = $(document)
 
@@ -11,6 +11,6 @@ $ ->
     $p().css "display", "none"  if e.target is this
     return
 
-  $document.on 'click', "#about-popup-contacts", ->
+  $document.on 'click', "#buy-print", ->
     $p().css "display", "block"
     return
