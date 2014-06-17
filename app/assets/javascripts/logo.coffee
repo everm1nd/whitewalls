@@ -2,7 +2,7 @@ $(document).ready ->
   init = ->
     window.addEventListener "scroll", (e) ->
       distanceY = window.pageYOffset or document.documentElement.scrollTop
-      shrinkOn = 100
+      shrinkOn = 140
       logotype = document.querySelector(".logo img")
 
       if distanceY > shrinkOn

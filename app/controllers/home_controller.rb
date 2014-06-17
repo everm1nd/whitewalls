@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@featured_artworks = Artwork.newest.featured.limit(13)
+  	@collections = Collection.all
   end
 
   def about

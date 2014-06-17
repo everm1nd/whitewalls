@@ -1,27 +1,29 @@
 .image-wrapper class="page-#{current_page}"
-  .gradient
-  .headline
-    h1 Принты от современных дизайнеров и художников
-.featured-artowrks
-  - banner_artworks = @featured_artworks.shift(5)
+  / .gradient
+  / .headline
+  /   h1 Искусство рядом. Авторские принты от 3000 руб.
+h1.main-headline Искусство рядом. Авторские принты от 3000 руб.
+.top-collections
+  - banner_collections = @collections.shift(3)
   .banner
     .jcarousel-wrapper
       .jcarousel
         ul
-          - banner_artworks.each do |artwork|
-            li.big
-              .artwork-wrapper
-                .artwork
-                  .image= link_to image_tag(artwork.image.preview.url), artwork
-                  .links
-                    = link_to artwork.artist.name, artwork, class: "artist"
-                    = link_to artwork.title, artwork, class: "title"
-                    = link_to in_rubbles(artwork.price), artwork, class: "price"
+          - banner_collections.each do |collection|
+            li
+              .collection
+                .image style="background: url('#{collection.image.url}'); background-size: cover;" = link_to " ", collection_path(collection)
+                .title= link_to collection.title, collection_path(collection)
+                .button= link_to 'Посмотреть коллекцию', collection_path(collection)
+                / .description= collection.description
       
       p.jcarousel-pagination
-
-  .list
-    - @featured_artworks.each do |artwork|
-      = render artwork
+h2.colletions-title Другие коллекции
+.collections-wrapper
+  - @collections.each do |collection|
+    .collection
+      .image= link_to image_tag(collection.image.url), collection_path(collection)
+      .title= link_to collection.title, collection_path(collection)
+      / .description= collection.description
 .centered-link-wrapper
-  =link_to 'Все работы', artworks_path
+  =link_to 'Все принты', artworks_path

@@ -11,4 +11,6 @@ Whitewalls::Application.routes.draw do
   
   resources :artworks, only: [:index, :show]
 
+  resources :collections, only: :show
+
 end

@@ -5,21 +5,17 @@ requestAnimationFrame = window.requestAnimationFrame       ||
                         (callback, element) ->
                           window.setTimeout(callback, 300)
 
-header = false
-menu = false
+about = false
 
 reset = ->
-  header = $(".header.home")
-  menu = $(".header ul li")
+  about = $(".about-popup")
   
 proxyScroll = ->
   scroll = $(window).scrollTop()
-  if scroll >= 140
-    header.addClass "transparent-header"
-    menu.removeClass "transparent-menu"
+  if scroll >= 250
+    about.addClass "fixed-about"
   else
-    header.removeClass("transparent-header")
-    menu.addClass "transparent-menu"
+    about.removeClass("fixed-about")
   return
 
 $ -> reset()

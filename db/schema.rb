@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140603194016) do
+ActiveRecord::Schema.define(version: 20140616213515) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -62,7 +62,17 @@ ActiveRecord::Schema.define(version: 20140603194016) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "image"
-    t.boolean  "featured",    default: false
+    t.integer  "collection_id"
+  end
+
+  add_index "artworks", ["collection_id"], name: "index_artworks_on_collection_id", using: :btree
+
+  create_table "collections", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -1,0 +1,7 @@
+.collection-show style="background: url('#{@collection.image.url}'); background-size: cover;"
+  .title= @collection.title
+  .description= @collection.description
+h2.colletions-title Все принты в коллекции
+.artworks-collections
+  - @collection.artworks.each do |artwork|
+    = render artwork
