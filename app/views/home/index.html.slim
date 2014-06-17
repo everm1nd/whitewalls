@@ -1,7 +1,8 @@
 .image-wrapper class="page-#{current_page}"
-  .gradient
-  .headline
-    h1 Искусство рядом. Авторские принты от 3000 руб.
+  / .gradient
+  / .headline
+  /   h1 Искусство рядом. Авторские принты от 3000 руб.
+h1.main-headline Искусство рядом. Авторские принты от 3000 руб.
 .top-collections
   - banner_collections = @collections.shift(3)
   .banner
@@ -18,7 +19,7 @@
       
       p.jcarousel-pagination
 h2.colletions-title Другие коллекции
-.collections
+.collections-wrapper
   - @collections.each do |collection|
     .collection
       .image= link_to image_tag(collection.image.url), collection_path(collection)

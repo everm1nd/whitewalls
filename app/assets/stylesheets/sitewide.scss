@@ -1067,7 +1067,7 @@ button::-moz-focus-inner {
 }
 
 
-.collections {
+.collections-wrapper {
   max-width: $main-width;
   margin: 20px auto;
   .collection {
@@ -1113,6 +1113,81 @@ button::-moz-focus-inner {
   border-bottom: 1px solid $color-gray-light;
   width: 100%;
 }
+
+
+
+.collection-show {
+  height: 200px;
+  .title {
+    color: white;
+    @include font_museo_sans_cyrl(500);
+    text-align: center;
+    padding-top: 65px;
+    font-size: 2.2em;
+  }
+  .description {
+    color: white;
+    text-align: center;
+    max-width: 700px;
+    margin: 10px auto 0;
+  }
+}
+
+
+.artworks-collections {
+  max-width: $main-width;
+  margin: $padding auto 45px;
+  .artwork {
+    width: $artwork-width;
+    margin-right: ($width - $artwork-width*3)/2;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    vertical-align: top;
+    @include font_museo_sans_cyrl(300);
+    margin-bottom: $padding*2;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    a {
+      display: block;
+    }
+
+    .artist {
+      font-size: $font-size-small;
+      color: $color-gray;
+      margin-top: 8px;
+    }
+
+    .title {
+      @include font_museo_sans_cyrl(500);
+      font-size: 1.1em;
+      margin-top: 7px;
+      line-height: 1.4;
+    }
+
+    .price {
+      color: $color-link;
+      font-size: $font-size-small;
+      margin-top: 8px;
+    }
+    img {
+      width: 100%;
+      @include transition(all .2s ease);
+      &:hover {
+        opacity: .9;
+      }
+    }
+  }
+}
+
+
+.main-headline {
+  font-size: 2.2em;
+  text-align: center;
+  padding: $padding;
+}
+
 
 
 

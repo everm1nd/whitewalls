@@ -1,7 +1,7 @@
-.collection
-  .image= image_tag @collection.image.url
+.collection-show style="background: url('#{@collection.image.url}'); background-size: cover;"
   .title= @collection.title
   .description= @collection.description
-  .artworks
-    - @collection.artworks.each do |artwork|
-      = render artwork
+h2.colletions-title Все принты в коллекции
+.artworks-collections
+  - @collection.artworks.each do |artwork|
+    = render artwork

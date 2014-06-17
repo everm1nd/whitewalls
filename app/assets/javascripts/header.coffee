@@ -14,7 +14,7 @@ reset = ->
   
 proxyScroll = ->
   scroll = $(window).scrollTop()
-  if scroll >= 100
+  if scroll >= 140
     header.addClass "transparent-header"
     menu.removeClass "transparent-menu"
   else
