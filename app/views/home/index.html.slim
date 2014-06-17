@@ -1,7 +1,7 @@
 .image-wrapper class="page-#{current_page}"
   .gradient
   .headline
-    h1 Принты от современных дизайнеров и художников
+    h1 Искусство рядом. Авторские принты от 3000 руб.
 .top-collections
   - banner_collections = @collections.shift(3)
   .banner
@@ -9,20 +9,20 @@
       .jcarousel
         ul
           - banner_collections.each do |collection|
-            li.big
-              .collection-wrapper
-						    .collection
-						      .image= link_to image_tag(collection.image.url), collection_path(collection)
-						      .title= link_to collection.title, collection_path(collection)
-						      .description= collection.description
+            li
+              .collection
+                .image style="background: url('#{collection.image.url}'); background-size: cover;" = link_to " ", collection_path(collection)
+                .title= link_to collection.title, collection_path(collection)
+                .button= link_to 'Посмотреть коллекцию', collection_path(collection)
+                / .description= collection.description
       
       p.jcarousel-pagination
-h2 Коллекции
+h2.colletions-title Другие коллекции
 .collections
   - @collections.each do |collection|
     .collection
       .image= link_to image_tag(collection.image.url), collection_path(collection)
       .title= link_to collection.title, collection_path(collection)
-      .description= collection.description
+      / .description= collection.description
 .centered-link-wrapper
-  =link_to 'Все работы', artworks_path
+  =link_to 'Все принты', artworks_path
