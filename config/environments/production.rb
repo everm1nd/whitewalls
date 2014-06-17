@@ -82,7 +82,7 @@ Whitewalls::Application.configure do
     :address   => "smtp.mandrillapp.com",
     :port      => 587,
     :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => "everm1nd.mail@gmail.com",
+    :user_name => "mkovalevsky@gmail.com",
     :password  => "qAHgK4UxFO25PXwC8jVvcQ", # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
     :domain => 'google.com', # your domain to identify your server when connecting
