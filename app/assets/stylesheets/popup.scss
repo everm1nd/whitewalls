@@ -145,15 +145,28 @@ p {
     }
     .form {
       width: 100%;
-      margin-top: $padding/2;
     }
-    .title {
-      font-size: .875em;
+    .control-label {
+      display: block;
       color: #222;
+      font-size: .875em;
+      margin-top: 25px;
     }
-    .buy {
-      @include button;
-      width: auto;
+    .input {
+      position: relative;
+      abbr {
+        color: red;
+      }
+    }
+    input {
+      width: 100%;
+      outline: none;
+      -webkit-appearance: none;
+      @include font_museo_sans_cyrl(300);
+      font-size: 1em;
+      margin: 5px 0 0;
+      border: 1px solid #eee;
+      padding: 7px 0;
     }
   }
 }
