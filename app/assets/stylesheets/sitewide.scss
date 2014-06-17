@@ -429,6 +429,32 @@ ul {
     padding: $padding;
     position: relative;
 
+    .partners {
+      max-width: $main-width;
+      margin: 0 auto;
+      text-align: center;
+      p {
+        color: $color-gray;
+        padding-top: 0;
+        margin-bottom: 10px;
+        font-size: 1em;
+      }
+      a {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 60px;
+        &:last-child { margin-right: 0; }
+        &:hover { opacity: .8; }
+        img {
+          height: 40px;
+        }
+      }
+    } 
+  }
+  .other-content {
+    padding: $padding;
+    position: relative;
+    background-color: $color-gray-light;
     .copywrite {
       color: $color-gray;
       display: inline-block;
@@ -441,7 +467,11 @@ ul {
       li {
         display: inline-block;
         margin-right: $padding/2;
-
+        cursor: pointer;
+        @include transition(all .2s ease);
+        &:hover {
+          color: $color-link;
+        }
         &:last-child {
           margin-right: 0;
         }
@@ -470,7 +500,7 @@ ul {
           font-size: 16px;
           border-radius: 100px;
           display: inline-block;
-          background-color: #bbb;
+          background-color: #999;
         }
       }
 
@@ -478,21 +508,9 @@ ul {
         &:hover {
           background-color: #3D5A99;
         }
-      }
-
-      .tw {
-        &:hover {
-          background-color: #3A96FF;
-        }
-      }
-
-      .vk {
-        &:hover {
-          background-color: #5D7EA2;
-        }
       }    
     }
-  }
+  }  
 }
 
 .content {
