@@ -3,9 +3,8 @@ class OrderMailer < ActionMailer::Base
 
   default from: "from@example.com"
 
-  def new_order(artwork, user_email) # Blue Monday, hah
-  	@artwork    = artwork
-  	@user_email = user_email
+  def new_order(order) # Blue Monday, hah
+  	@order = order
   	mail(to: 'everm1nd.mail@gmail.com', subject: 'WhiteWalls: New Order')
   end
 end

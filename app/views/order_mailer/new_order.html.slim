@@ -1,3 +1,8 @@
 h2 Ура! У Вас новый заказ!
 
-.text Кажется кто-то хочет купить работу #{ link_to @artwork.title, @artwork }. Напишите этому счастливчику на #{ mail_to @user_email }
+.text Кажется кто-то хочет купить работу #{ link_to @order.artwork.title, @order.artwork }.
+.contacts
+  .span Вот его контактные данные:
+  .span Имя: #{ @order.name }
+  .span Email: #{ @order.email }
+  .span Адрес: #{ @order.address }

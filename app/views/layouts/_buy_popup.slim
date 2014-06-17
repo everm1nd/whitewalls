@@ -4,10 +4,10 @@
   .buy-form
     h2 Купить принт
     .form
-      .title = ("Имя:")
-        / input
-      .title = ("Емеил:")
-        / input
-      .title = ("Номер телефона:")
-        / input
-      .buy = ("Отправить заказ")
+      = simple_form_for @order do |f|
+        = f.input :name
+        = f.input :email
+        = f.input :address
+        = f.input :comment
+        = f.hidden_field :artwork_id, value: @artwork.id
+        = f.submit
