@@ -1,16 +1,17 @@
 $ ->
-  $p = -> $(".popup-wrapper-buy")
+  $p = $(".popup-wrapper-buy")
 
   $document = $(document)
 
-  $document.on 'click', ".popup-close", ->
-    $p().css "display", "none"
-    return
+  getPopup = (el) ->
+    popupId = $(el).data('popup-id')
+    $p.filter("##{popupId}")
+
+  $document.on 'click', ".popup-close", (e) ->
+    $p.hide()
 
   $document.on 'click', ".transparent", (e) ->
-    $p().css "display", "none"  if e.target is this
-    return
+    $p.hide() if e.target is this
 
-  $document.on 'click', "#buy-print", ->
-    $p().css "display", "block"
-    return
+  $document.on 'click', "#buy-print", (e) ->
+    getPopup(e.target).show()

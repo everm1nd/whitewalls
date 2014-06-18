@@ -8,4 +8,4 @@
         = link_to artwork.title, artwork, class: "title"
         .description= artwork.description
         .price= in_rubbles(artwork.price)
-        #buy-print.buy = "Купить принт"
+        #buy-print.buy data-popup-id='buy-popup-#{ artwork.id }' = "Купить принт"
