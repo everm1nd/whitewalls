@@ -5,6 +5,6 @@ class OrderMailer < ActionMailer::Base
 
   def new_order(order) # Blue Monday, hah
   	@order = order
-  	mail(to: 'everm1nd.mail@gmail.com', subject: 'WhiteWalls: New Order')
+  	mail(to: Settings.admin_email, subject: 'WhiteWalls: New Order')
   end
 end

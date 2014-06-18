@@ -24,6 +24,8 @@ gem 'mini_magick'
 
 gem 'kaminari'
 
+gem 'settingslogic'
+
 gem 'unicorn'
 
 group :development do
