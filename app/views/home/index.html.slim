@@ -1,29 +1,30 @@
-.image-wrapper class="page-#{current_page}"
+#image-wrapper
   / .gradient
-  / .headline
-  /   h1 Искусство рядом. Авторские принты от 3000 руб.
-h1.main-headline Искусство рядом. Авторские принты от 3000 руб.
-.top-collections
-  - banner_collections = @collections.shift(3)
-  .banner
-    .jcarousel-wrapper
-      .jcarousel
-        ul
-          - banner_collections.each do |collection|
-            li
-              .collection
-                .image style="background: url('#{collection.image.url}'); background-size: cover;" = link_to " ", collection_path(collection)
-                .title= link_to collection.title, collection_path(collection)
-                .button= link_to 'Посмотреть коллекцию', collection_path(collection)
-                / .description= collection.description
-      
-      p.jcarousel-pagination
-h2.colletions-title Другие коллекции
-.collections-wrapper
-  - @collections.each do |collection|
-    .collection
-      .image= link_to image_tag(collection.image.url), collection_path(collection)
-      .title= link_to collection.title, collection_path(collection)
-      / .description= collection.description
-.centered-link-wrapper
-  =link_to 'Все принты', artworks_path
+.headline
+  h1.main-headline Искусство рядом. Тиражная графика современных художников
+/ h1.main-headline Искусство рядом. Тиражная графика современных художников
+#collections-mainpage
+  .top-collections
+    - banner_collections = @collections.shift(3)
+    .banner
+      .jcarousel-wrapper
+        .jcarousel
+          ul
+            - banner_collections.each do |collection|
+              li
+                .collection
+                  .image style="background: url('#{collection.image.url}'); background-size: cover;" = link_to " ", collection_path(collection)
+                  .title= link_to collection.title, collection_path(collection)
+                  .button= link_to 'Посмотреть коллекцию', collection_path(collection)
+                  / .description= collection.description
+        
+        p.jcarousel-pagination
+  h2.colletions-title Другие коллекции
+  .collections-wrapper
+    - @collections.each do |collection|
+      .collection
+        .image= link_to image_tag(collection.image.url), collection_path(collection)
+        .title= link_to collection.title, collection_path(collection)
+        / .description= collection.description
+  .centered-link-wrapper
+    =link_to 'Все принты', artworks_path
