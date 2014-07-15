@@ -2,7 +2,7 @@
 .big
   .large
     .wrapper
-      = link_to image_tag(artwork.image.medium.url), artwork.image.medium.url, class: [ "link", "image-link" ]
+      = link_to image_tag(artwork.image.medium.url), artwork.image.url, class: [ "link", "image-link" ]
       .content
         = link_to artwork.artist.name, artwork.artist, class: "author"
         = link_to artwork.title, artwork, class: "title"
