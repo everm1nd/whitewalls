@@ -1,3 +1,5 @@
+- content_for :title do
+	= "#{@collection.title}"
 .collection-show style="background: url('#{@collection.image.url}'); background-size: cover;"
   .title= @collection.title
   .description= @collection.description

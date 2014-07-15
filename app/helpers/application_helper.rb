@@ -6,4 +6,8 @@ module ApplicationHelper
 	def current_page
 		params[:page] || 1
 	end
+
+	def title
+		(content_for?(:title) ? content_for(:title) + ' - ' : '') + "Whitewalls"
+	end
 end

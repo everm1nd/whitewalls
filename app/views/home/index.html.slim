@@ -8,6 +8,8 @@
     - banner_collections = @collections.shift(3)
     .banner
       .jcarousel-wrapper
+        button.jcarousel-control-prev Prev
+        button.jcarousel-control-next Next
         .jcarousel
           ul
             - banner_collections.each do |collection|
@@ -17,7 +19,6 @@
                   .title= link_to collection.title, collection_path(collection)
                   .button= link_to 'Посмотреть коллекцию', collection_path(collection)
                   / .description= collection.description
-        
         p.jcarousel-pagination
   h2.colletions-title Другие коллекции
   .collections-wrapper

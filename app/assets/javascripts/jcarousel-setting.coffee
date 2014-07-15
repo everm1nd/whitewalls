@@ -1,5 +1,7 @@
 init = ->
-  $(".jcarousel").jcarousel()
+  $(".jcarousel").jcarousel({
+    wrap: 'circular'
+  })
   $(".jcarousel-control-prev").on("jcarouselcontrol:active", ->
     $(this).removeClass "inactive"
     return
