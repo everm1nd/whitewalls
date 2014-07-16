@@ -41,6 +41,7 @@ $font-size-medium: 1.1em;
     text-align: center;
     margin-top: $padding/1.5;
   }
+  .facebook { font-size: 1em; }
   .phone {
     font-size: 4.2em;
     margin-top: 20px;
@@ -65,11 +66,24 @@ $font-size-medium: 1.1em;
   right: $padding;
   cursor: pointer;
   img {
-    width: 50px;
+    width: $padding;
     @include transition(all .2s ease);
     &:hover {
       opacity: .5;
     }
+  }
+}
+
+.button-popup {
+  border: 2px solid $color-link;
+  display: inline-block;
+  padding: 10px 15px;
+  color: $color-link;
+  font-size: 1em;
+  margin-top: 10px;
+  &:hover {
+    background: $color-link;
+    color: white;
   }
 }
 

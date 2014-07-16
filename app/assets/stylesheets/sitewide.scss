@@ -1018,6 +1018,12 @@ figure {
   display: none;
 }
 
+.mfp-figure {
+  figure {
+    img { max-width: 100%; }
+  }
+}
+
 .mfp-hide {
   display: none !important;
 }
@@ -1067,7 +1073,7 @@ button::-moz-focus-inner {
 }
 
 .mfp-close img {
-  width: 50px;
+  width: 30px;
 }
 
 .mfp-close :hover {
