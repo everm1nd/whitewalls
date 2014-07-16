@@ -8,8 +8,8 @@
     - banner_collections = @collections.shift(3)
     .banner
       .jcarousel-wrapper
-        button.jcarousel-control-prev Prev
-        button.jcarousel-control-next Next
+        .jcarousel-control-prev = image_tag("arrow_left.svg")
+        .jcarousel-control-next = image_tag("arrow_right.svg")
         .jcarousel
           ul
             - banner_collections.each do |collection|
