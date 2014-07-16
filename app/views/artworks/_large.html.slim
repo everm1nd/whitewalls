@@ -9,3 +9,5 @@
         .description= artwork.description
         .price= in_rubbles(artwork.price)
         #buy-print.buy data-popup-id='buy-popup-#{ artwork.id }' = "Купить принт"
+      .share
+      	a target="_blank" href="http://www.facebook.com/sharer/sharer.php?u=#{ artwork_path artwork }" Share
