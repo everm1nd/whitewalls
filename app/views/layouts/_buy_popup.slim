@@ -8,6 +8,7 @@
         = f.input :name
         = f.input :email
         = f.input :address
+        = f.input :phone
         = f.input :comment, as: :text
         = f.hidden_field :artwork_id, value: artwork ? artwork.id : @artwork.id
         .buy = f.submit

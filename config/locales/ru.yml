@@ -5,6 +5,7 @@ ru:
         name: Имя
         email: E-mail
         address: Адрес
+        phone: Телефон
         comment: Комментарий
   helpers:
     submit:
