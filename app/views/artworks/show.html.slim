@@ -6,8 +6,9 @@
 	- content_for :facebook_description
 		= @artwork.description
 .artwork
-	h1.artist
-		= @artwork.artist.name
+	- if @artwork.collection
+		h1.artist
+			= @artwork.collection.title
 	= render partial: 'artworks/large', locals: { artwork: @artwork }
 	.artist-works
 		h2 Другие принты этого художника
