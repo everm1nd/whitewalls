@@ -515,6 +515,12 @@ ul {
   }  
 }
 
+.collection-name-top {
+  font-size: 1.1em;
+  @include font_museo_sans_cyrl(500);
+  margin-top: $padding;
+}
+
 .content {
   .group {
     margin-top: 62px;

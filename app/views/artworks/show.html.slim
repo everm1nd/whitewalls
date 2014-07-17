@@ -7,7 +7,7 @@
 		= @artwork.description
 .artwork
 	- if @artwork.collection
-		h1.artist
+		h1.collection-name-top
 			= @artwork.collection.title
 	= render partial: 'artworks/large', locals: { artwork: @artwork }
 	.artist-works

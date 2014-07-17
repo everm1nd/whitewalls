@@ -49,7 +49,9 @@ $font-size-medium: 1.1em;
 }
 
 .transparent {
-  background-color: $about-popup-color;
+  // background-color: $about-popup-color;
+  background: image_url('back.jpg') no-repeat center center;
+  background-size: cover;
   position: fixed;
   top: 0;
   right: 0;
@@ -141,7 +143,7 @@ p {
     cursor: pointer;
   }
   .buy-form {
-    position: fixed;
+    position: absolute;
     top: 80px; right: 0; left: 0;
     width: 350px;
     background-color: white;
