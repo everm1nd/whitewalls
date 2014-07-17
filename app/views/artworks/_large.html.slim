@@ -13,8 +13,7 @@
         .share-message Поделиться с друзьями:
         ul
           li.icon
-          	a.fb target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?u=#{ artwork_path artwork }" f
-          / li.icon
-          /   a.tw target="_blank" href="http://www.twitter.com/share?url=#{ artwork_path artwork }" t
+            / TODO: move it to helper
+          	a.fb target="_blank" rel="nofollow" href="http://www.facebook.com/sharer/sharer.php?u=#{ artwork_path artwork, only_path: false }" f 
           li.icon
-            a.vk target="_blank" href="http://www.vk.com/share.php?url=#{ artwork_path artwork }" v
+            a.vk target="_blank" href="http://www.vk.com/share.php?url=#{ artwork_path artwork, only_path: false }" v
