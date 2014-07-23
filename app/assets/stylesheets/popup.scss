@@ -49,8 +49,7 @@ $font-size-medium: 1.1em;
 }
 
 .transparent {
-  // background-color: $about-popup-color;
-  background: image_url('back.jpg') no-repeat center center;
+  background-color: rgba(0,0,0,.6);
   background-size: cover;
   position: fixed;
   top: 0;
@@ -77,14 +76,14 @@ $font-size-medium: 1.1em;
 }
 
 .button-popup {
-  border: 2px solid $color-link;
+  border: 2px solid $about-popup-color;
   display: inline-block;
   padding: 10px 15px;
-  color: $color-link;
+  color: $about-popup-color;
   font-size: 1em;
   margin-top: 10px;
   &:hover {
-    background: $color-link;
+    background: $about-popup-color;
     color: white;
   }
 }
@@ -97,6 +96,7 @@ $font-size-medium: 1.1em;
 .about-popup {
   width: $about-popup-width;
   background-color: white;
+  border: 8px solid $about-popup-color;
   position: absolute;
   top: 100px;
   height: auto;
