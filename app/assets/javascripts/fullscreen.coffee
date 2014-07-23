@@ -5,7 +5,7 @@ init = ->
 
     setFullPageHeight = (page) ->
       viewportHeight = $(window).height()
-      $cover.next().css marginTop: viewportHeight - 81
+      $cover.next().css marginTop: viewportHeight - 82
 
     setFullPageHeight $cover
     $(window).resize ->
