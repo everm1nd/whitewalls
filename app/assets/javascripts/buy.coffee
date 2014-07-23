@@ -1,4 +1,4 @@
-$ ->
+init = ->
   $p = $(".popup-wrapper-buy")
 
   $document = $(document)
@@ -15,3 +15,5 @@ $ ->
 
   $document.on 'click', "#buy-print", (e) ->
     getPopup(e.target).show()
+
+$(document).on 'page:change', init
