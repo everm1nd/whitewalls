@@ -2,6 +2,8 @@
   = image_url 'start-1.jpg'
 - content_for :facebook_description
   | Искусство рядом. Тиражная графика современных художников.
+- content_for :title
+  | Тиражная графика современных художников.
 #image-wrapper
 .headline
   h1.main-headline Искусство рядом. Тиражная графика современных художников
@@ -17,6 +19,7 @@
             - banner_collections.each do |collection|
               li
                 .collection
+                  .bg-collection
                   .image style="background: url('#{collection.image.url}'); background-size: cover;" = link_to " ", collection_path(collection)
                   .title= link_to collection.title, collection_path(collection)
                   .button= link_to 'Посмотреть коллекцию', collection_path(collection)
