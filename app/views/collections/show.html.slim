@@ -4,8 +4,8 @@
   .bg-collection-overlay
   .bg-collection-show style="background: url('#{@collection.image.url}'); background-size: cover;"
     .collection-info
-      .title= @collection.title
-      .description= @collection.description
+      .title= @collection.title.html_safe
+      .description= @collection.description.html_safe
 .artworks-collections
   - @collection.artworks.each do |artwork|
     = render artwork

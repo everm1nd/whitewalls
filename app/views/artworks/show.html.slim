@@ -8,7 +8,7 @@
 .artwork
 	- if @artwork.collection
 		h1.collection-name-top
-			= @artwork.collection.title
+			= @artwork.collection.title.html_safe
 	= render partial: 'artworks/large', locals: { artwork: @artwork }
 	.artist-works
 		h2 Другие принты этого художника
