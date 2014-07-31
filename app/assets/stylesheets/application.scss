@@ -1,1 +1,4 @@
-//=require 'sitewide'
+@import "basic/mixins.scss";
+@import "basic/typo.scss";
+@import "components/popup.scss";
+@import 'sitewide'

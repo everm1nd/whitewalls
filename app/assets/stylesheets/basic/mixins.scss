@@ -11,16 +11,6 @@ $color-white: #fff;
   font-weight: $size;
 }
 
-@mixin font_playfair_display_regular() {
-  font-family: "playfair_display_regular", "Helvetica", "Arial", "Sans-Serif";
-  font-weight: 500;
-}
-
-@mixin font_playfair_display_italic() {
-  font-family: "playfair_display_italic", "Helvetica", "Arial", "Sans-Serif";
-  font-weight: 500;
-}
-
 @mixin button {
   padding: 15px;
   border: 2px solid $color-link;
