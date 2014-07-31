@@ -11,4 +11,4 @@
         = f.input :phone
         = f.input :comment, as: :text
         = f.hidden_field :artwork_id, value: artwork ? artwork.id : @artwork.id
-        .buy = f.submit
+        .buy-popup = f.submit

@@ -136,6 +136,20 @@ p {
     background-color: rgba(0, 0, 0, .7);
     cursor: pointer;
   }
+  .popup-close {
+    z-index: 9999999;
+    position: fixed;
+    top: $padding;
+    right: $padding;
+    cursor: pointer;
+    img {
+      width: $padding;
+      @include transition(all .2s ease);
+      &:hover {
+        opacity: .5;
+      }
+    }
+  }
   .buy-form {
     position: absolute;
     top: 80px; right: 0; left: 0;
@@ -168,7 +182,7 @@ p {
         color: red;
       }
     }
-    .buy {
+    .buy-popup {
       margin-top: 10px;
       input {
         @include button;
