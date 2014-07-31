@@ -4,11 +4,11 @@
 	= @artwork.image.medium.url
 - if @artwork.description
 	- content_for :facebook_description
-		= @artwork.description
+		= strip_tags @artwork.description
 .artwork
 	- if @artwork.collection
 		h1.collection-name-top
-			= @artwork.collection.title.html_safe
+			= @artwork.collection.title
 	= render partial: 'artworks/large', locals: { artwork: @artwork }
 	.artist-works
 		h2 Другие принты этого художника
