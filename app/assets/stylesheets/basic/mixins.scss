@@ -49,3 +49,45 @@ $color-white: #fff;
 @mixin transition($text) {
   @include сross-browser("transition", $text);
 }
+
+@mixin respond-to($media) {
+  @if $media == supersmall {
+    @media only screen and (max-width: $break-supersmall + $width-menu) { @content; }
+  }
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == small {
+    @media only screen and (max-width: $break-middle - 1 + 60) {@content; }
+  }
+  @else if $media == medium {
+    @media only screen and (min-width: $break-middle) and (max-width: $break-large - 1) {@content; }
+  }
+  @else if $media == large {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else if $media == superlarge {
+    @media only screen and (max-width: $break-superlarge) {@content; }
+  }
+  @else if $media == lessthansmall {
+    @media only screen and (max-width: $break-middle - 1) {@content; }
+  }
+  @else if $media == lessthanmedium {
+    @media only screen and (max-width: $break-large - 1 + $width-menu) {@content; }
+  }
+  @else if $media == largefixed {
+    @media only screen and (min-width: $break-large + 1) { @content; }
+  }
+  @else if $media == leftmenu {
+    @media only screen and (min-width: $break-left-menu + 1) and (min-height: $break-small) { @content; }
+  }
+  @else if $media == middleheight {
+    @media only screen and (max-height: $break-middle-height) { @content; }
+  }
+  @else if $media == noneparallax {
+    @media only screen and (max-width: $break-large + 1) { @content; }
+  }
+  @else if $media == largeresolution {
+    @media only screen and (min-width: $width-max) { @content; }
+  }
+}
