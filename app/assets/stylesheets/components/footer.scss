@@ -6,35 +6,36 @@
     padding: $padding;
     position: relative;
     background-color: white;
-
-    .partners {
-      max-width: $main-width;
-      margin: 0 auto;
-      text-align: center;
-      p {
-        color: $color-gray;
-        padding-top: 0;
-        margin-bottom: 10px;
-        font-size: 1em;
-      }
-      .blou {
-        img { height: 37px; }
-      }
-      .pop {
-        img { height: 50px; }
-      }
-      a {
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 60px;
-        &:last-child { margin-right: 0; }
-        &:hover { opacity: .8; }
-        img {
-          height: 40px;
-        }
-      }
-    } 
   }
+
+  .partners {
+    max-width: $main-width;
+    margin: 0 auto;
+    text-align: center;
+    p {
+      color: $color-gray;
+      padding-top: 0;
+      margin-bottom: 10px;
+      font-size: 1em;
+    }
+    .blou {
+      img { height: 37px; }
+    }
+    .pop {
+      img { height: 50px; }
+    }
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 60px;
+      &:last-child { margin-right: 0; }
+      &:hover { opacity: .8; }
+      img {
+        height: 40px;
+      }
+    }
+  } 
+
   .other-content {
     padding: $padding;
     position: relative;
@@ -47,7 +48,6 @@
 
     .menu {
       display: inline-block;
-
       li {
         display: inline-block;
         margin-right: $padding/2;
