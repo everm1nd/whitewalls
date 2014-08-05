@@ -6,6 +6,7 @@ ActiveAdmin.register Collection do
       f.input :title
       f.input :description
       f.input :image, as: :file, hint: f.template.image_tag(f.object.image.url) 
+      f.input :preview_image, as: :file, hint: f.template.image_tag(f.object.preview_image.url) 
     end
     f.actions
   end

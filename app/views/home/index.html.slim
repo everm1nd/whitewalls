@@ -28,7 +28,7 @@
   .collections-wrapper
     - @collections.each do |collection|
       .collection
-        .image= link_to image_tag(collection.image.url), collection_path(collection)
+        .image= link_to image_tag(collection.preview_image.url), collection_path(collection)
         .title= link_to collection.title, collection_path(collection)
   .centered-link-wrapper
     =link_to 'Все принты', artworks_path
