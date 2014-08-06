@@ -17,6 +17,8 @@ html
       ga('create', 'UA-52210511-1', 'auto');
       ga('send', 'pageview');
 
+      document.addEventListener('page:change',function(){ ga('send', 'pageview') })
+
   body
   	= render 'layouts/header'
     .content = yield
