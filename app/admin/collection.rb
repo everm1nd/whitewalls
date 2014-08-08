@@ -1,5 +1,5 @@
 ActiveAdmin.register Collection do
-  permit_params :title, :description, :image
+  permit_params :title, :description, :image, :preview_image
 
   form multipart: true do |f|
     f.inputs "General" do
