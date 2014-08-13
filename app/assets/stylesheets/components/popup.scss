@@ -98,6 +98,25 @@ $about-popup-color: #58c6eb;
   margin-left: -($about-popup-width/2 + $padding*1.5+5px);
   padding: $padding*2 $padding*2+5px;
   z-index: 9999999;
+  .facebook {
+    font-size: 1.5em;
+    @include font_museo_sans_cyrl(500);
+    text-align: center;
+    margin-top: $padding/1.5;
+  }
+  .facebook { font-size: 1em; }
+  .button-popup {
+    border: 2px solid $about-popup-color;
+    display: inline-block;
+    padding: 10px 15px;
+    color: $about-popup-color;
+    font-size: 1em;
+    margin-top: 10px;
+    &:hover {
+      background: $about-popup-color;
+      color: white;
+    }
+  }
 }
 
 .about-text.contacts {
