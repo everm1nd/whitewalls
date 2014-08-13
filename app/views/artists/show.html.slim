@@ -1,3 +1,7 @@
+- content_for :title
+  = "#{@artist.name} - Проблемы белых стен"
+- content_for :description
+  = "#{@artist.name} - #{@artist.bio}".truncate(200)
 .artist-name
 	= @artist.name.html_safe
 .artist-bio

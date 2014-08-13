@@ -1,5 +1,7 @@
-- content_for :title do
-	= "#{@collection.title}"
+- content_for :title
+	= "#{@collection.title} - Проблемы белых стен"
+- content_for :description
+  = "#{@collection.title}. #{@collection.description}".truncate(200)
 .collection-show
   .bg-collection-overlay
   .bg-collection-show style="background: url('#{@collection.image.url}'); background-size: cover;"

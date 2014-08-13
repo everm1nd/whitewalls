@@ -6,6 +6,7 @@ html
     = javascript_include_tag "application", "data-turbolinks-track" => true
     = csrf_meta_tags
     = favicon_link_tag 'favicon.ico'
+    = render 'layouts/metatags'
     = render 'layouts/facebook_og_tags'
   body
   	= render 'layouts/header'

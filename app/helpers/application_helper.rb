@@ -8,6 +8,6 @@ module ApplicationHelper
 	end
 
 	def title
-		(content_for?(:title) ? content_for(:title) + ' - ' : '') + "Whitewalls"
+		content_for?(:title) ? content_for(:title) : 'Проблемы белых стен - Искусство рядом. Тиражная графика современных художников'
 	end
 end

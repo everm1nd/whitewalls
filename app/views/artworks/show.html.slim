@@ -1,10 +1,12 @@
-- content_for :title do
-	= "#{@artwork.artist.name} - #{@artwork.title}"
 - content_for	:facebook_image
 	= @artwork.image.medium.url
 - if @artwork.description
 	- content_for :facebook_description
 		= strip_tags @artwork.description
+- content_for :title
+	= "#{@artwork.artist.name} - #{@artwork.title} - Проблемы белых стен"
+- content_for :description
+  = "#{@artwork.artist.name} - #{@artwork.title} - #{@artwork.description}".truncate(200)
 .artwork
 	- if @artwork.collection
 		h1.collection-name-top
