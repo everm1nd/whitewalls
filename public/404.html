@@ -1,58 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>The page you were looking for doesn't exist (404)</title>
+  <title>404 - Страница не найдена</title>
+  <meta charset="UTF-8" />
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
   <style>
+  @font-face {
+      font-family: "museo_sans_cyrl_300";
+      src:  url('/assets/museo_sans_cyrl/museosans-300.woff') format('woff'),
+            url('/assets/museo_sans_cyrl/museosans-300.eot?#iefix') format('embedded-opentype'),
+            url('/assets/museo_sans_cyrl/museosans-300.ttf') format('truetype'),
+            url('/assets/museo_sans_cyrl/museosans-300.svg#museo_sans_cyrllight') format('svg');
+      font-weight: 300;
+      font-style: normal;
+  }
+
+  @font-face {
+      font-family: "museo_sans_cyrl_500";
+      src:  url('/assets/museo_sans_cyrl/museosans-500.woff') format('woff'),
+            url('/assets/museo_sans_cyrl/museosans-500.eot?#iefix') format('embedded-opentype'),
+            url('/assets/museo_sans_cyrl/museosans-500.ttf') format('truetype'),
+            url('/assets/museo_sans_cyrl/museosans-500.svg#museo_sans_cyrl500') format('svg');
+      font-weight: 500;
+      font-style: normal;
+  }
   body {
-    background-color: #EFEFEF;
-    color: #2E2F30;
+    background-color: #fff;
+    color: #222;
     text-align: center;
-    font-family: arial, sans-serif;
+    font-family: "museo_sans_cyrl_300", arial, sans-serif;
+    min-width: 900px;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
   }
-
-  div.dialog {
-    width: 25em;
-    margin: 4em auto 0 auto;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-left-color: #999;
-    border-bottom-color: #BBB;
-    border-top: #B00100 solid 4px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    background-color: white;
-    padding: 7px 4em 0 4em;
+  .error_wrapper {
+    position: absolute;
+    right: 0; left: 0; bottom: 0; top: 0;
+    overflow: hidden;
+    background: url('start-1.jpg') no-repeat center center;
+    background-size: cover;
+    min-width: 900px;
   }
-
+  a {
+    display: block;
+    margin-top: 15px;
+    font-family: "museo_sans_cyrl_500", arial, sans-serif;
+    color: #222;
+    font-size: 18px;
+    color: #fff;
+  }
+  .first {
+    margin-top: 20px;
+  }
   h1 {
-    font-size: 100%;
-    color: #730E15;
-    line-height: 1.5em;
+    font-family: "museo_sans_cyrl_500", arial, sans-serif;
+    color: #fff;
   }
-
-  body > p {
-    width: 33em;
-    margin: 0 auto 1em;
-    padding: 1em 0;
-    background-color: #F7F7F7;
-    border: 1px solid #CCC;
-    border-right-color: #999;
-    border-bottom-color: #999;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-top-color: #DADADA;
-    color: #666;
-    box-shadow:0 3px 8px rgba(50, 50, 50, 0.17);
+  .logo {
+    height: 110px;
+  }
+  p {
+    margin: 0 auto;
+    max-width: 410px;
+    text-align: center;
+    font-size: 21px;
+    line-height: 1.4;
+    margin-top: 20px;
+    color: #fff;
+  }
+  .message {
+    position: absolute;
+    left: 50%; top: 50%;
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -ms-transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    -o-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
   }
   </style>
 </head>
-
 <body>
-  <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <h1>The page you were looking for doesn't exist.</h1>
-    <p>You may have mistyped the address or the page may have moved.</p>
+  <div class="error_wrapper">
+    <div class="message">
+      <h1>Ошибка 404</h1>
+      <img class="logo" src="logo.svg">
+      <p>Эта страница для тех, кто решил узнать, что такое жизнь без искусства. Выглядит не очень, не правда ли?</p>
+      <a class="first" href="http://whitewalls.gallery">Вернуться на главную</a>
+      <a target="blank" href="https://www.facebook.com/whitewallsproblems">Мы в Facebook</a>
+    </div>
+    
   </div>
-  <p>If you are the application owner check the logs for more information.</p>
 </body>
 </html>
